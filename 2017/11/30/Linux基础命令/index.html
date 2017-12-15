@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title> | 老安藏宝阁</title><link rel="stylesheet" type="text/css" href="//fonts.css.network/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">老安藏宝阁</h1><a id="logo" href="/.">老安藏宝阁</a><p class="description">弃我去者，昨日之日不可留。乱我心者，今日之日多烦忧；</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-meta"><a href="/2017/11/30/Linux基础命令/#comments" class="comment-count"></a><p><span class="date">Nov 30, 2017</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><h2 id="Linux基础命令"><a href="#Linux基础命令" class="headerlink" title="Linux基础命令"></a>Linux基础命令</h2><ul>
+<li>命令分类</li>
+</ul>
+<pre><code>1，内置命令：shell内部命令；
+2，外部命令：在文件系统的某个路径下有一个与命令名称相对应的可执行文件；
+</code></pre><h4 id="type命令"><a href="#type命令" class="headerlink" title="type命令"></a>type命令</h4><pre><code>查看命令的分类；
+</code></pre><h4 id="help命令"><a href="#help命令" class="headerlink" title="help命令"></a>help命令</h4><p>命令使用帮助；</p>
+<ul>
+<li>内置命令使用</li>
+</ul>
+<pre><code>help COMMAND
+</code></pre><ul>
+<li>外部命令使用</li>
+</ul>
+<pre><code>COMMAND --help
+</code></pre><h4 id="man命令"><a href="#man命令" class="headerlink" title="man命令"></a>man命令</h4><pre><code>命令使用帮助；
+</code></pre><ul>
+<li>man章节分类</li>
+</ul>
+<pre><code>1，用户命令（/bin;/usr/bin;/usr/local/bin）;
+2，系统调用；
+3，库用户；
+4，特殊文件（设备文件）；
+5，文件格式（配置文件的语法）
+6，游戏；
+7，杂项；
+8，管理命令（/sbin;/usr/sbin;/usr/local/sbin）;
+</code></pre><ul>
+<li>命令行语法格式及特殊字符</li>
+</ul>
+<pre><code>命令 &lt;必选参数1|必选参数2&gt; [-option {必选参数1|必选参数2|必选参数3|}] [可选参数...] {（默认参数）|参数|参数}
+</code></pre><blockquote>
+<p>1，&lt;&gt;：必选参数，实际使用时应将他替换为所要使用的参数；</p>
+<p>2，{}：必选参数，内部使用，包含此处允许使用的参数；</p>
+<p>3，[]：可选参数，在命令中根据需要加以取舍；</p>
+<p>4，()：指明参数的默认值，一般用于{}中；</p>
+<p>5，…：任意多个参数；</p>
+<p>6，|：用于分隔多个互斥的参数，含义“或”，使用时只能选择一个；</p>
+<h4 id="whatis"><a href="#whatis" class="headerlink" title="whatis"></a>whatis</h4><p>查看命令在man帮助中使用的章节；</p>
+<h4 id="env命令"><a href="#env命令" class="headerlink" title="env命令"></a>env命令</h4><p>显示当前用户的环境变量；</p>
+<h4 id="export命令"><a href="#export命令" class="headerlink" title="export命令"></a>export命令</h4><p>显示当前导出成用户变量的shell变量；<br>export LANG=en（设置当前使用的语言为英文）</p>
+<h4 id="set命令"><a href="#set命令" class="headerlink" title="set命令"></a>set命令</h4><p>显示当前shell的变量和当前用户的变量；</p>
+<h4 id="hash命令"><a href="#hash命令" class="headerlink" title="hash命令"></a>hash命令</h4><p>显示当前已缓存的命令路径，和使用次数；</p>
+<h4 id="printf命令"><a href="#printf命令" class="headerlink" title="printf命令"></a>printf命令</h4><pre><code>格式化并输出结果到标准输出；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+</blockquote>
+<pre><code>printf format [argument]
+</code></pre><ul>
+<li>格式（format）</li>
+</ul>
+<pre><code>\n：换行；
+\t：水平制表符；
+</code></pre><h2 id="时间命令管理"><a href="#时间命令管理" class="headerlink" title="时间命令管理"></a>时间命令管理</h2><h4 id="date命令"><a href="#date命令" class="headerlink" title="date命令"></a>date命令</h4><pre><code>查看系统时间；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>date [option] ... [+format]
+</code></pre><ul>
+<li>格式（+format）</li>
+</ul>
+<pre><code>%F：显示年-月-日；
+%D：显示日/月/年；
+%T：显示时.分.秒;
+%y|Y：显示年；
+%h：显示月；
+%d：显示日；
+%H：显示时；
+%M：显示分；
+%S：显示秒；
+%s：显示从从1970年到现在的秒数；
+</code></pre><h4 id="clock命令"><a href="#clock命令" class="headerlink" title="clock命令"></a>clock命令</h4><pre><code>查看硬件时间；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>clock [function] [option...]
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-w: --systohc以系统时间为准校正硬件时间；
+-s：--hctosys以硬件时间为准校正系统时间；
+</code></pre><h4 id="cal命令"><a href="#cal命令" class="headerlink" title="cal命令"></a>cal命令</h4><pre><code>查看日历；
+</code></pre><h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h4 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h4><pre><code>查看文件；
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-l：长格式显示；        
+-h：单位换算，以人类最易看懂的形式显示出来；
+-d：只显示目录文件；
+-i：显示文件的inode；
+-a：显示所有的文件；
+    .：当前目录；
+    ..：当前目录的父目录；
+-A：除了不显示.和..目录外，其他的都显示；
+-r：逆序显示；
+</code></pre><h4 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h4><pre><code>切换目录；
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>~username：进入指定用户的家目录（只root用户可以使用）；
+-：在当前目录和前一次所在的目录来回切换；
+</code></pre><h4 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h4><pre><code>以绝对路径的形式显示当前所在的目录；
+</code></pre><h4 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h4><pre><code>创建目录；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>mkdir [option]... dir...
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-p：递归创建目录；
+-v：显示详细的执行过程；
+{}：特殊用法，可以同时创建多个目录，如{a,b}，在当前目录下同时创建a和b；
+</code></pre><h4 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h4><pre><code>删除空的目录；
+</code></pre><h4 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h4><pre><code>查看目录树；
+</code></pre><h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><h4 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h4><pre><code>修改文件的时间戳；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>touch [option]... file...
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-c：不创建文件，当文件存在时改变文件的时间戳；
+-a：改变文件的访问时间；
+-m：不改变文件内容，只改变文件的修改时间；
+-t：指定文件的访问时间和修改时间，时间格式为[[CC]YY]MMDDhhmm[.ss]（年月天时分.秒）；
+</code></pre><h4 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h4><pre><code>删除文件或命令；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>rm [option]... file...
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-r：递归删除文件或目录；
+-f：不用再次确认删除文件或目录；
+-v：显示详细的执行过程；
+</code></pre><h4 id="stat命令"><a href="#stat命令" class="headerlink" title="stat命令"></a>stat命令</h4><pre><code>查看文件的属性；
+</code></pre><ul>
+<li>文件的时间戳的分类</li>
+</ul>
+<pre><code>1，atime：最近一次访问时间；
+2，mtime：最近一次修改时间；
+3，ctime：最近一次改变时间（元数据）；
+</code></pre><h4 id="file命令"><a href="#file命令" class="headerlink" title="file命令"></a>file命令</h4><pre><code>查看文件的类型；
+</code></pre><h4 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h4><pre><code>备份文件；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>cp [option]... SOURCE DEST
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-f：强制性的备份文件；
+-p：备份文件时不改变文件的属主和属组；
+-d：不改变文件的任何属性；
+-r|R：递归备份；
+-a：相当于-dR，归档备份，常用于数据备份；
+</code></pre><h4 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h4><pre><code>移动文件或目录；
+</code></pre><ul>
+<li>语法</li>
+</ul>
+<pre><code>mv [option]... SOURCE DEST
+mv -t DEST SOURCE
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-f：强制覆盖；
+-t：先指定目标，再指定源文件；
+</code></pre><h4 id="install命令"><a href="#install命令" class="headerlink" title="install命令"></a>install命令</h4><pre><code>安装或升级软件或备份文件，但是install允许你控制文件的所有属性；
+</code></pre><ul>
+<li>语法 </li>
+</ul>
+<pre><code>install [option]... SOURCE DEST
+install [option]... SOURCE... DIRECTORY
+install -d DIRECTORY
+install -t DIRECTORY SOURCE
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-t：先指定目标目录，再指定源文件；
+-d：生成目录；
+</code></pre><h3 id="查看文本"><a href="#查看文本" class="headerlink" title="查看文本"></a>查看文本</h3><h4 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h4><ul>
+<li>命令格式</li>
+</ul>
+<pre><code>cat [option] [file]
+</code></pre><ul>
+<li>参数选项</li>
+</ul>
+<pre><code>-n：对显示出来的每一行添加编号；
+-s：压缩连续的空行为一行；
+-b：只给文本中非空行编号；
+-E：对显示出来的每一行结尾加上$；
+-A：显示文本中所有的控制符；
+-v：显示文本中的特殊字符；
+</code></pre><h4 id="less命令"><a href="#less命令" class="headerlink" title="less命令"></a>less命令</h4><ul>
+<li>功能</li>
+</ul>
+<pre><code>一页一页的查看文本
+</code></pre><ul>
+<li>查看命令</li>
+</ul>
+<pre><code>/匹配项：在文本中搜索与匹配项相同的字符；
+n键：跳到下一个匹配到的字符；
+N键：跳到上一个匹配到的字符；
+q键：退出less；
+</code></pre><h4 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h4><pre><code>显示文本前行内容；
+</code></pre><ul>
+<li>命令格式</li>
+</ul>
+<pre><code>head [option] [file]
+</code></pre><ul>
+<li>参数选项</li>
+</ul>
+<pre><code>-#：直接指定要显示的前多少的行数；
+-n #：显示文本的前#行；
+-c #：显示文本的前#字节；
+-f：查看文件头部不退出，等待显示后续追加的内容；
+</code></pre><h4 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h4><pre><code>显示文本后行内容；
+</code></pre><ul>
+<li>命令格式</li>
+</ul>
+<pre><code>tail [option] [file]
+</code></pre><ul>
+<li>参数选项</li>
+</ul>
+<pre><code>-#：直接指定要显示的后多少行的行数；
+-n #：显示文本的后#行；
+-c #：显示文本的后#行；
+-f：查看文件尾部不退出，等待显示后续追加的内容；
+</code></pre><h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><h4 id="cut命令"><a href="#cut命令" class="headerlink" title="cut命令"></a>cut命令</h4><pre><code>按列处理文本；
+</code></pre><ul>
+<li>命令格式</li>
+</ul>
+<pre><code>cut [option] [file]
+</code></pre><ul>
+<li>参数选项</li>
+</ul>
+<pre><code>-d &quot;delimiter&quot;：指定分隔符；
+-f fields：指明要抽取的列；
+    #：第#列；
+    #，#，#：输出多个不连续的列；
+    #-#：输出连续多个列；
+</code></pre><h4 id="sort命令"><a href="#sort命令" class="headerlink" title="sort命令"></a>sort命令</h4><pre><code>用于文件的排序
+</code></pre><ul>
+<li>命令格式</li>
+</ul>
+<pre><code>sort [option] [file]
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-n：按数字的大小，从小到大的排序；
+-r：反向的输出文本的内容；
+-t：指定分隔符；
+-k：指定匹配列；
+-f：排序时不区分大小写；
+-u：输出时删除重复的行；
+</code></pre><blockquote>
+<p>注意： 1，sort默认是按照ASCII码表排序； 2，只有连续且完全相同的方为重复行；</p>
+</blockquote>
+<ul>
+<li>命令格式</li>
+</ul>
+<pre><code>uniq [option] [file]
+</code></pre><ul>
+<li>命令参数</li>
+</ul>
+<pre><code>-c：显示每一行重复的次数；
+-d：只显示重复过的行；
+-u：只显示不曾重复过的行；
+</code></pre><blockquote>
+<p>注意：只有连续且完全相同的方为重复行；</p>
+<h4 id="wc命令"><a href="#wc命令" class="headerlink" title="wc命令"></a>wc命令</h4><pre><code>收集文本行数、单词总数、字符总数和字节总数；
+</code></pre><ul>
+<li>命令格式</li>
+</ul>
+</blockquote>
+<pre><code>wc [option] [file]
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-l：只统计行总数；
+-w: 只统计单词总数；
+-m：相当于-c,只统计字符总数；
+-c：只统计字节总数；
+</code></pre><h4 id="tr命令"><a href="#tr命令" class="headerlink" title="tr命令"></a>tr命令</h4><pre><code>转换或删除字符；
+</code></pre><ul>
+<li>命令格式</li>
+</ul>
+<pre><code>tr [option]... set1 [set2]
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-d：删除选定的字符；
+</code></pre><blockquote>
+<p>注意：转换字符是要注意一一对应；</p>
+<h4 id="diff命令"><a href="#diff命令" class="headerlink" title="diff命令"></a>diff命令</h4><p>用于比较两个文件的不同；</p>
+<ul>
+<li>命令格式</li>
+</ul>
+</blockquote>
+<pre><code>diff [option]... [file] 
+</code></pre><ul>
+<li>选项</li>
+</ul>
+<pre><code>-s：显示两个文件的不一样行；
+</code></pre></div><div class="tags"></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2017/11/30/行编辑器 - sed/" class="pre"></a><a href="/2017/11/30/Linux文件系统/" class="next"></a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux基础命令"><span class="toc-text">Linux基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#type命令"><span class="toc-text">type命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#help命令"><span class="toc-text">help命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#man命令"><span class="toc-text">man命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#whatis"><span class="toc-text">whatis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#env命令"><span class="toc-text">env命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#export命令"><span class="toc-text">export命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#set命令"><span class="toc-text">set命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#hash命令"><span class="toc-text">hash命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#printf命令"><span class="toc-text">printf命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间命令管理"><span class="toc-text">时间命令管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#date命令"><span class="toc-text">date命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#clock命令"><span class="toc-text">clock命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cal命令"><span class="toc-text">cal命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#目录管理"><span class="toc-text">目录管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ls命令"><span class="toc-text">ls命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cd命令"><span class="toc-text">cd命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pwd命令"><span class="toc-text">pwd命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mkdir命令"><span class="toc-text">mkdir命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rmdir命令"><span class="toc-text">rmdir命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tree"><span class="toc-text">tree</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件管理"><span class="toc-text">文件管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#touch命令"><span class="toc-text">touch命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rm命令"><span class="toc-text">rm命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stat命令"><span class="toc-text">stat命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#file命令"><span class="toc-text">file命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cp命令"><span class="toc-text">cp命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mv命令"><span class="toc-text">mv命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#install命令"><span class="toc-text">install命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看文本"><span class="toc-text">查看文本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cat命令"><span class="toc-text">cat命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#less命令"><span class="toc-text">less命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#head命令"><span class="toc-text">head命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tail命令"><span class="toc-text">tail命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本处理"><span class="toc-text">文本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cut命令"><span class="toc-text">cut命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sort命令"><span class="toc-text">sort命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wc命令"><span class="toc-text">wc命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tr命令"><span class="toc-text">tr命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#diff命令"><span class="toc-text">diff命令</span></a></li></ol></li></ol></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/用户和组/">用户和组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/权限/">权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/文本过滤器 - grep/">文本过滤器 - grep</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/查看CPU、内存、磁盘的占用率/">查看CPU、内存、磁盘的占用率</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/行编辑器 - sed/">行编辑器 - sed</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/Linux基础命令/">Linux基础命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/Linux文件系统/">Linux文件系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/Linux启动流程/">Linux启动流程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/Linux操作系统组成/">Linux操作系统组成</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/30/bash/">bash</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-you"> 友情链接</i></div><ul></ul><a href="https://linuxgeeks.github.io" title="老李的杂货铺" target="_blank">老李的杂货铺</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">安豪哲.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script></body></html>
