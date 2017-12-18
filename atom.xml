@@ -136,33 +136,6 @@
   </entry>
   
   <entry>
-    <title>Linux启动流程</title>
-    <link href="http://yoursite.com/2017/11/30/Linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"/>
-    <id>http://yoursite.com/2017/11/30/Linux启动流程/</id>
-    <published>2017-11-30T05:47:32.586Z</published>
-    <updated>2017-12-18T04:33:43.014Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Linux启动流程"><a href="#Linux启动流程" class="headerlink" title="Linux启动流程"></a>Linux启动流程</h2><ul><li>启动顺序</li></ul><ol><li>centos5：是按顺序启动；</li><li>centos6：有依赖关系的按顺序一个个启动，没有依赖关系的并行启动；</li><li>centos7：不管有没有依赖关系，都并行启动； </li></ol><ul><li>启动流程</li></ul><p>post（加电自检）—device（找第一个启动设备）—MBR—446grupstage1（找到grup的第一个阶段）—stage1.5/bootfilesystem（grup1.5阶段是加载文件系统驱动）—/boot（找到boot分区）—/boot/grup/grup.conf（grup2阶段定义了kernel等）—kernul  vmlinuz  root=/ （以只读的方式挂载根）—initrd /initramfs（根文件系统的驱动）—init（系统的第一个进程）—/etc/inittab（启动相应的模式）—/etc/rc.d/rc.sysinit（初始化的第一个脚本）—/etc/rcN.d/K,S（关闭和启动服务脚本的软链接）—/etc/init.d/rc.local（兜底文件）—login（登录界面）</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Linux启动流程&quot;&gt;&lt;a href=&quot;#Linux启动流程&quot; class=&quot;headerlink&quot; title=&quot;Linux启动流程&quot;&gt;&lt;/a&gt;Linux启动流程&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;启动顺序&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;centos5：是按顺
-      
-    
-    </summary>
-    
-    
-      <category term="post、grub、init" scheme="http://yoursite.com/tags/post%E3%80%81grub%E3%80%81init/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linux基础命令</title>
     <link href="http://yoursite.com/2017/11/30/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2017/11/30/Linux基础命令/</id>
@@ -210,6 +183,33 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Linux启动流程</title>
+    <link href="http://yoursite.com/2017/11/30/Linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"/>
+    <id>http://yoursite.com/2017/11/30/Linux启动流程/</id>
+    <published>2017-11-30T05:47:32.586Z</published>
+    <updated>2017-12-18T04:33:43.014Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Linux启动流程"><a href="#Linux启动流程" class="headerlink" title="Linux启动流程"></a>Linux启动流程</h2><ul><li>启动顺序</li></ul><ol><li>centos5：是按顺序启动；</li><li>centos6：有依赖关系的按顺序一个个启动，没有依赖关系的并行启动；</li><li>centos7：不管有没有依赖关系，都并行启动； </li></ol><ul><li>启动流程</li></ul><p>post（加电自检）—device（找第一个启动设备）—MBR—446grupstage1（找到grup的第一个阶段）—stage1.5/bootfilesystem（grup1.5阶段是加载文件系统驱动）—/boot（找到boot分区）—/boot/grup/grup.conf（grup2阶段定义了kernel等）—kernul  vmlinuz  root=/ （以只读的方式挂载根）—initrd /initramfs（根文件系统的驱动）—init（系统的第一个进程）—/etc/inittab（启动相应的模式）—/etc/rc.d/rc.sysinit（初始化的第一个脚本）—/etc/rcN.d/K,S（关闭和启动服务脚本的软链接）—/etc/init.d/rc.local（兜底文件）—login（登录界面）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Linux启动流程&quot;&gt;&lt;a href=&quot;#Linux启动流程&quot; class=&quot;headerlink&quot; title=&quot;Linux启动流程&quot;&gt;&lt;/a&gt;Linux启动流程&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;启动顺序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;centos5：是按顺
+      
+    
+    </summary>
+    
+    
+      <category term="post、grub、init" scheme="http://yoursite.com/tags/post%E3%80%81grub%E3%80%81init/"/>
     
   </entry>
   
