@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-14T09:43:53.436Z</updated>
+  <updated>2017-12-18T03:01:50.963Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim</title>
+    <link href="http://yoursite.com/2017/12/18/vim/"/>
+    <id>http://yoursite.com/2017/12/18/vim/</id>
+    <published>2017-12-18T03:14:13.950Z</published>
+    <updated>2017-12-18T03:01:50.963Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><p>vim是vi的增加版，在原有的基础上添加了shell语法颜色，便于我们进行排错；</p><p>vi是UNIX和Linux的标准的编辑器，相等于win上的记事本一样，不仅在功能上不逊色于任何一款编辑器，而且，它在不管在Linux那个版本中的使用都是一样。可以说只要你学了vi，就可以在任何版本的Linux自由畅行；</p><ul><li>用法</li></ul><pre><code>vim [option] [file...]vim file：文件存在则打开文件，文件不存在则打开一个新文件；vim +# file：打开文件，自动跳转光标到第#行；vim +/pattern file：打开文件，自动跳转光标到第一次匹配到的行；</code></pre><ul><li>选项</li></ul><pre><code>-o：水平分隔多个文件。如：vim -o file1 file2 ...;-O：垂直分隔多个文件。如：vim -O file1 file2 ...;    Ctrl键+w键：来回切换文件；    wqa：同时保存多个文件；-d：比较多个文件。如：vim -d file1 file2 ...;-m：以只读的方式打开文件；-b：以二进制方式打开文件；</code></pre><h2 id="模式划分"><a href="#模式划分" class="headerlink" title="模式划分"></a>模式划分</h2><p>vim默认进入的模式就是编辑模式；</p><p>1，编辑模式；</p><p>2，输入模式；</p><p>3，末行模式；</p><p><img src="C:/Users/an/AppData/Local/YNote/Data/qqCCA0FFDA0E2AF17EC59686E97F5AED76/vim1.png" alt="image"></p><h3 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h3><p>当我们vim打开一个文件时直接进入编辑模式，编辑模式功能非常强大，可以实现以下操作：</p><h5 id="字符操作"><a href="#字符操作" class="headerlink" title="字符操作"></a>字符操作</h5><pre><code>h：光标向左移动一个字符；j：光标向下移动一个字符；k：光标向上移动一个字符；l：光标向右移动一个字符；#h：光标向左移动#个字符；#j，#k，#l同上；</code></pre><h5 id="单词操作"><a href="#单词操作" class="headerlink" title="单词操作"></a>单词操作</h5><pre><code>w：光标跳转到下一个单词词首；e：光标跳转到下一个单词词尾；b：光标跳转到当前单词或上一个单词词首；#w：光标跳转到当前单词后第#个单词词首；#e，#b同上；</code></pre><h5 id="行操作"><a href="#行操作" class="headerlink" title="行操作"></a>行操作</h5><pre><code>0：光标跳转到当前行行首；^：光标跳转到当前行第一个非空字符；$：光标跳转到当前行行尾；</code></pre><h5 id="页面操作"><a href="#页面操作" class="headerlink" title="页面操作"></a>页面操作</h5><pre><code>H：光标跳转到当前屏的第一行行首；M：光标跳转到当前屏的中间行行首；L：光标跳转到当前屏的最后一行行首；</code></pre><h5 id="全局操作"><a href="#全局操作" class="headerlink" title="全局操作"></a>全局操作</h5><pre><code>gg|1G：光标跳转到全文的第一行行首；G：光标跳转到全文的最后一行行首；</code></pre><h5 id="字符剪切操作"><a href="#字符剪切操作" class="headerlink" title="字符剪切操作"></a>字符剪切操作</h5><pre><code>x：剪切光标所在处的字符；X：剪切光标前一个字符；#x：剪切光标往后#个字符；#X：剪切光标往前#个字符；</code></pre><h5 id="字符替换操作"><a href="#字符替换操作" class="headerlink" title="字符替换操作"></a>字符替换操作</h5><pre><code>r：替换光标所在的字符；#r：替换#个字符；</code></pre><h5 id="修改操作"><a href="#修改操作" class="headerlink" title="修改操作"></a>修改操作</h5><pre><code>cc：删除光标所在行，并进入输入模式；C：删除光标所在行，并进入输入模式；</code></pre><h5 id="剪切操作"><a href="#剪切操作" class="headerlink" title="剪切操作"></a>剪切操作</h5><pre><code>dh：剪切光标所在位置的前一个字符；dl同上；dj：剪切光标所在行和下一行；dk同上；dw：剪切光标所在位置到词首；de，db同上；dd：剪切当前行；dgg：剪切当前行到第一行；dG：剪切当前行到最后一行；#dd：剪切当前行以及往下#行；</code></pre><h5 id="复制操作"><a href="#复制操作" class="headerlink" title="复制操作"></a>复制操作</h5><pre><code>yh：复制前一个字符；yl同上；yj：复制当前行以及下一行；yk同上；yw：复制光标所在位置到下一个单词前；ye,yb同上；yy：复制当前行；#yy：复制#行；</code></pre><h5 id="粘贴操作"><a href="#粘贴操作" class="headerlink" title="粘贴操作"></a>粘贴操作</h5><pre><code>p：粘贴复制或剪切的行到下一行，粘贴字符或单词到当前光标后；P：粘贴复制或剪切的行到上一行，粘贴字符或单词到当前光标前；#p|P：粘贴#次；</code></pre><h5 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h5><pre><code>u：撤销上一次操作；#u：撤销#次操作；</code></pre><h5 id="替换大小写"><a href="#替换大小写" class="headerlink" title="替换大小写"></a>替换大小写</h5><pre><code>guu：把当前行换为小写；gUU：把当前行换为大写；#guu：把当前行及以下#-1行换为小写；#gUU：把当前行及以下#-1行换为大写；</code></pre><h5 id="可视化操作"><a href="#可视化操作" class="headerlink" title="可视化操作"></a>可视化操作</h5><pre><code>v：字符选择，以字符为单位作为可视化操作；V：行选择，以行为单位作为可视化操作；Ctrl+v：列选择，以列为单位作为可视化操作；</code></pre><h5 id="退出文本"><a href="#退出文本" class="headerlink" title="退出文本"></a>退出文本</h5><pre><code>ZZ</code></pre><h3 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h3><p>输入模式只能从编辑模式进入，可以对文本中的内容进行编辑来实现增加，删除或修改；</p><pre><code>i：在光标处进入输入模式；I：在当前行首进入输入模式；a：在光标处后一个字符前进入输入模式；A：在当前行行尾进入输入模式；o：在当前行的下方打开新一行进入输入模式；O：在当前行的上方打开新一行进入输入模式；</code></pre><h3 id="末行模式"><a href="#末行模式" class="headerlink" title="末行模式"></a>末行模式</h3><p>末行模式只能从编辑模式进入，可以关闭文件，进行一些特殊的使用；</p><h5 id="地址定界"><a href="#地址定界" class="headerlink" title="地址定界"></a>地址定界</h5><pre><code>.：第一行；$：最后一行；+#：向下#行；%：表示全文；</code></pre><h5 id="退出文本-1"><a href="#退出文本-1" class="headerlink" title="退出文本"></a>退出文本</h5><pre><code>:wq：保存退出文本；:q!：不保存退出文本；</code></pre><h5 id="读文本到vim"><a href="#读文本到vim" class="headerlink" title="读文本到vim"></a>读文本到vim</h5><pre><code>:r file：在当前vim中读入一个文件；</code></pre><h5 id="将vim写入到文本"><a href="#将vim写入到文本" class="headerlink" title="将vim写入到文本"></a>将vim写入到文本</h5><pre><code>:w file：将vim中的内容导入到一个文件中；</code></pre><h5 id="设置行号"><a href="#设置行号" class="headerlink" title="设置行号"></a>设置行号</h5><pre><code>:set nu：显示行号；:set nonu：取消行号；</code></pre><h5 id="模式匹配搜素"><a href="#模式匹配搜素" class="headerlink" title="模式匹配搜素"></a>模式匹配搜素</h5><pre><code>/pattern：高亮搜索；    n：向下跳转匹配项；    N：向上跳转匹配项；:noh：取消高亮搜索；</code></pre><h5 id="查找替换"><a href="#查找替换" class="headerlink" title="查找替换"></a>查找替换</h5><pre><code>:addr1,addr2s@@@gi    g：全局替换；    i：不区分大小写；</code></pre><h5 id="vim中执行命令"><a href="#vim中执行命令" class="headerlink" title="vim中执行命令"></a>vim中执行命令</h5><pre><code>:!command</code></pre><h5 id="特殊用法"><a href="#特殊用法" class="headerlink" title="特殊用法"></a>特殊用法</h5><pre><code>:set paste：设置只是单纯的粘贴；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;vim&quot;&gt;&lt;a href=&quot;#vim&quot; class=&quot;headerlink&quot; title=&quot;vim&quot;&gt;&lt;/a&gt;vim&lt;/h1&gt;&lt;p&gt;vim是vi的增加版，在原有的基础上添加了shell语法颜色，便于我们进行排错；&lt;/p&gt;
+&lt;p&gt;vi是UNIX和Linux的标准的编
+      
+    
+    </summary>
+    
+    
+      <category term="编辑模式、输入模式、末行模式" scheme="http://yoursite.com/tags/%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%E3%80%81%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F%E3%80%81%E6%9C%AB%E8%A1%8C%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
