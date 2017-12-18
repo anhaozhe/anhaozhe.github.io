@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>老安藏宝阁</title>
+  
+  <subtitle>弃我去者，昨日之日不可留。乱我心者，今日之日多烦忧；</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-11-14T09:43:53.436Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>安豪哲</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84/"/>
+    <id>http://yoursite.com/2017/11/30/用户和组/</id>
+    <published>2017-11-30T05:47:32.632Z</published>
+    <updated>2017-11-14T09:43:53.436Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h2><pre><code>1，管理员用户（root），UID（0）；2，普通用户（UID：1-65535）    系统用户：UID，1-500（centos 6），1-1000（centos 7）。对系统进程获取资源进行权限分配；    登录用户：UID，501-65535（centos 6），1001-65535（centos 7）；</code></pre><h3 id="Linux用户的主要配置"><a href="#Linux用户的主要配置" class="headerlink" title="Linux用户的主要配置"></a>Linux用户的主要配置</h3><pre><code>/etc/passwd：用户及其属性信息；    root:x:0:0:root:/root/:/bin/bash    用户名:口令:uid:gid:注释:家目录:shell类型</code></pre><h3 id="用户命令"><a href="#用户命令" class="headerlink" title="用户命令"></a>用户命令</h3><pre><code>创建用户：useradd；修改用户：删除用户：userdel；</code></pre><h4 id="useradd"><a href="#useradd" class="headerlink" title="useradd"></a>useradd</h4><pre><code>useradd [options] LOGIN</code></pre><h5 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h5><pre><code>-p：指定用户的密码；</code></pre><h4 id="user"><a href="#user" class="headerlink" title="user"></a>user</h4><h4 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h4><pre><code>userdel [options] username</code></pre><h5 id="选项-1"><a href="#选项-1" class="headerlink" title="选项"></a>选项</h5><pre><code>-r：删除用户并一起删除用户的家目录；</code></pre><h2 id="组"><a href="#组" class="headerlink" title="组"></a>组</h2><pre><code>主组：    用户有且只有一个主组，组名同用户名，且只有一个用户；    辅助组：    用户可以有0个或多个辅助组；</code></pre><h3 id="linux组主要配置"><a href="#linux组主要配置" class="headerlink" title="linux组主要配置"></a>linux组主要配置</h3><h3 id="组命令"><a href="#组命令" class="headerlink" title="组命令"></a>组命令</h3><h2 id="用户密码"><a href="#用户密码" class="headerlink" title="用户密码"></a>用户密码</h2><p>passwd</p><h2 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h2><h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre><code>id [options]... USER</code></pre><h4 id="选项-2"><a href="#选项-2" class="headerlink" title="选项"></a>选项</h4><pre><code>-u：查看用户的uid；-g：查看用户的gid；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;用户&quot;&gt;&lt;a href=&quot;#用户&quot; class=&quot;headerlink&quot; title=&quot;用户&quot;&gt;&lt;/a&gt;用户&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;1，管理员用户（root），UID（0）；
+2，普通用户（UID：1-65535）
+    系统用户：UID，1-500（c
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/%E6%9D%83%E9%99%90/"/>
+    <id>http://yoursite.com/2017/11/30/权限/</id>
+    <published>2017-11-30T05:47:32.617Z</published>
+    <updated>2017-11-14T09:10:47.725Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/%E6%96%87%E6%9C%AC%E8%BF%87%E6%BB%A4%E5%99%A8%20-%20grep/"/>
+    <id>http://yoursite.com/2017/11/30/文本过滤器 - grep/</id>
+    <published>2017-11-30T05:47:32.617Z</published>
+    <updated>2017-11-07T08:00:08.843Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><ul><li>作用</li></ul><pre><code>文本搜索工具，根据用户指定的“模式”对目标文件进行匹配检测，打印匹配到的行；</code></pre><ul><li>用法</li></ul><pre><code>grep [options] pattern [file]</code></pre><h3 id="grep选项"><a href="#grep选项" class="headerlink" title="grep选项"></a>grep选项</h3><pre><code>--color：对匹配到的文本着色显示；-v：把没有匹配到的文本显示出来；-o：只显示匹配到的字符串；-i：忽略大小写；-w：在每一行进行单词的匹配；-q：静默模式，什么也不输出；-c：统计匹配到的行数；-n：显示匹配到的行号；-e：实现多个选项间的逻辑或（or）关系；-E：使用扩展正则表达式；-A #：显示匹配行的后#行（包括匹配行）；-B #：显示匹配行的前#行（包括匹配行）；-C #：显示匹配行的前后各#行（包括匹配行）；</code></pre><h3 id="grep模式匹配"><a href="#grep模式匹配" class="headerlink" title="grep模式匹配"></a>grep模式匹配</h3><pre><code>由正则表达式字符及文本字符所编写的过滤条件；</code></pre><ul><li>元字符分类</li></ul><pre><code>字符匹配，匹配次数，位置锚定，分组；</code></pre><h4 id="字符匹配"><a href="#字符匹配" class="headerlink" title="字符匹配"></a>字符匹配</h4><pre><code>.：匹配任意单个字符；[]：匹配指定范围内的任意字符；[^]：匹配指定范围外的任意字符；</code></pre><h4 id="匹配次数（贪婪模式）"><a href="#匹配次数（贪婪模式）" class="headerlink" title="匹配次数（贪婪模式）"></a>匹配次数（贪婪模式）</h4><pre><code>*：匹配前面字符任意次数，包含0次；.*：任意长度的任意字符；\?：匹配前面字符0次或1次；\+：匹配前面字符至少1次；\{n\}：匹配前面字符n次；\{m,n\}：匹配前面字符至少m次，最多n次；\{m,\}：匹配前面字符至少m次；\{,n\}：匹配前面字符最多n次；</code></pre><h4 id="位置锚定"><a href="#位置锚定" class="headerlink" title="位置锚定"></a>位置锚定</h4><pre><code>^：行首锚定；$：行尾锚定；^pattern$：用于模式匹配整行；    ^$：空行；    ^[[:space:]]*$：空白行；\&lt;或\b：词首锚定；\&gt;或\b：词尾锚定；    \&lt;pattern\&gt;：用于模式匹配整个单词；</code></pre><h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><pre><code>\(\)后向引用</code></pre><h2 id="egrep"><a href="#egrep" class="headerlink" title="egrep"></a>egrep</h2><ul><li>正则表达式分类</li></ul><pre><code>基础正则表达式：BRE；扩展正则表达式：ERE；</code></pre><ul><li>用法</li></ul><pre><code>egrep [options] pattern [file]</code></pre><h3 id="egrep选项"><a href="#egrep选项" class="headerlink" title="egrep选项"></a>egrep选项</h3><pre><code>因grep与egrep除模式匹配外，其他基本一样，所以egrep选项同上；</code></pre><h3 id="egrep模式匹配"><a href="#egrep模式匹配" class="headerlink" title="egrep模式匹配"></a>egrep模式匹配</h3><pre><code>由扩展正则表达式字符及文本字符所编写的过滤条件；</code></pre><ul><li>元字符分类</li></ul><pre><code>字符匹配，匹配次数，位置锚定，分组；</code></pre><h4 id="字符匹配-1"><a href="#字符匹配-1" class="headerlink" title="字符匹配"></a>字符匹配</h4><pre><code>.：匹配任意单个字符；[]：匹配指定范围内的任意字符；[^]：匹配指定范围外的任意字符；</code></pre><h4 id="匹配次数"><a href="#匹配次数" class="headerlink" title="匹配次数"></a>匹配次数</h4><pre><code>*：匹配前面字符任意次数，包含0次；?：匹配前面字符0次或1次；+：匹配前面字符至少1次；{n}：匹配前面字符n次；{m,n}：匹配前面字符至少m次，最多n次；</code></pre><h4 id="位置锚定-1"><a href="#位置锚定-1" class="headerlink" title="位置锚定"></a>位置锚定</h4><pre><code>^：行首锚定；$：行尾锚定；\&lt;或\b：词首锚定；\&gt;或\b：词尾锚定；</code></pre><h4 id="分组-1"><a href="#分组-1" class="headerlink" title="分组"></a>分组</h4><pre><code>()</code></pre><h4 id="逻辑或关系"><a href="#逻辑或关系" class="headerlink" title="逻辑或关系"></a>逻辑或关系</h4><pre><code>a|b：a或者b；C|cat：C或者cat；(C|c)at：Cat或者cat；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;grep&quot;&gt;&lt;a href=&quot;#grep&quot; class=&quot;headerlink&quot; title=&quot;grep&quot;&gt;&lt;/a&gt;grep&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;文本搜索工具，根据用户指定的“模式”对目标文件进行匹配检测，打
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/%E6%9F%A5%E7%9C%8BCPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A3%81%E7%9B%98%E7%9A%84%E5%8D%A0%E7%94%A8%E7%8E%87/"/>
+    <id>http://yoursite.com/2017/11/30/查看CPU、内存、磁盘的占用率/</id>
+    <published>2017-11-30T05:47:32.601Z</published>
+    <updated>2017-11-05T09:35:50.472Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="查看服务器CPU的占用率"><a href="#查看服务器CPU的占用率" class="headerlink" title="查看服务器CPU的占用率"></a>查看服务器CPU的占用率</h4><ul><li>top</li></ul><pre><code>可以实时的查看系统进程和资源的使用；</code></pre><h4 id="查看服务器内存的占用率"><a href="#查看服务器内存的占用率" class="headerlink" title="查看服务器内存的占用率"></a>查看服务器内存的占用率</h4><ul><li>free</li><li>命令参数</li></ul><pre><code>-h：以易阅读的方式显示出来；-m：以MB为单位显示出来；-k：以KB为单位显示出来；-g：以GB为单位显示出来；</code></pre><h4 id="查看磁盘的占用率"><a href="#查看磁盘的占用率" class="headerlink" title="查看磁盘的占用率"></a>查看磁盘的占用率</h4><ul><li>dh</li><li>命令参数</li></ul><pre><code>-h：以易阅读的方式显示出来；-m：以MB为单位显示出来；-k：以KB为单位显示出来；-l：只显示本地的文件系统；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;查看服务器CPU的占用率&quot;&gt;&lt;a href=&quot;#查看服务器CPU的占用率&quot; class=&quot;headerlink&quot; title=&quot;查看服务器CPU的占用率&quot;&gt;&lt;/a&gt;查看服务器CPU的占用率&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;top&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;cod
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/%E8%A1%8C%E7%BC%96%E8%BE%91%E5%99%A8%20-%20sed/"/>
+    <id>http://yoursite.com/2017/11/30/行编辑器 - sed/</id>
+    <published>2017-11-30T05:47:32.601Z</published>
+    <updated>2017-11-14T08:59:24.940Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="sed命令"><a href="#sed命令" class="headerlink" title="sed命令"></a>sed命令</h2><pre><code>默认不编辑原文件，仅对模式空间中的数据进行处理，而后，处理结束后，将模式空间打印至屏幕；</code></pre><h4 id="sed语法"><a href="#sed语法" class="headerlink" title="sed语法"></a>sed语法</h4><pre><code>sed [options] &apos;AddressCommand&apos; file ...</code></pre><h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><pre><code>-n：静默输出，不输出模式空间的内容至屏幕；-r：支持使用扩展正则表达式；-i：编辑原文件（比较危险，请小心使用，可以先备份，再-i编辑）；-e &apos;AddressCommand&apos; -e &apos;AddressCommand&apos;：多点编辑;</code></pre><h4 id="地址定界"><a href="#地址定界" class="headerlink" title="地址定界"></a>地址定界</h4><pre><code>1，#：指定某行；2，#，+#：指定从第几行开始，到后多少行；3，#，#：指从第几行到第几行；4，/pattern/：模式匹配，匹配符合的行显示出来；5，#，/pattern/：从第几行到第一次匹配到的行；6，/pattern1/,pattern2/：从第一次匹配到模式1的行，到第一次匹配到模式2的行；</code></pre><h4 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h4><pre><code>p：打印模式空间处理过的数据，原数据也一并打印到屏幕上；d：删除模式空间处理过的数据，其余未处理的数据打印到屏幕上；s@@@修饰符：查找替换，默认只替换第一次匹配到的字符串，支持使用其他的替换符号，s///、s###等；    修饰符：        g：全局替换；        i：忽略字符大小写；    后向引用：        \(\)    &amp;：引用整个模式匹配的条件；i：插入，在匹配行的上面新增一行；    如：sed &apos;/^root/i insert&apos; filea：添加，在匹配行的下面新增一行；    如：sed &apos;/^root/a add&apos; filer：读入一个文件到正在编辑的文件中；    如：sed &apos;^/root/r file&apos; filew：在匹配范围内的行添加到某个文件中；    如：sed &apos;^/root/w file&apos; file</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;sed命令&quot;&gt;&lt;a href=&quot;#sed命令&quot; class=&quot;headerlink&quot; title=&quot;sed命令&quot;&gt;&lt;/a&gt;sed命令&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;默认不编辑原文件，仅对模式空间中的数据进行处理，而后，处理结束后，将模式空间打印至屏幕；
+&lt;/cod
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/Linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/"/>
+    <id>http://yoursite.com/2017/11/30/Linux启动流程/</id>
+    <published>2017-11-30T05:47:32.586Z</published>
+    <updated>2017-09-28T09:53:54.059Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Linux启动流程"><a href="#Linux启动流程" class="headerlink" title="Linux启动流程"></a>Linux启动流程</h2><ul><li>启动顺序</li></ul><ol><li>centos5：是按顺序启动；</li><li>centos6：有依赖关系的按顺序一个个启动，没有依赖关系的并行启动；</li><li>centos7：不管有没有依赖关系，都并行启动； </li></ol><ul><li>启动流程</li></ul><p>post（加电自检）—device（找第一个启动设备）—MBR—446grupstage1（找到grup的第一个阶段）—stage1.5/bootfilesystem（grup1.5阶段是加载文件系统驱动）—/boot（找到boot分区）—/boot/grup/grup.conf（grup2阶段定义了kernel等）—kernul  vmlinuz  root=/ （以只读的方式挂载根）—initrd /initramfs（根文件系统的驱动）—init（系统的第一个进程）—/etc/inittab（启动相应的模式）—/etc/rc.d/rc.sysinit（初始化的第一个脚本）—/etc/rcN.d/K,S（关闭和启动服务脚本的软链接）—/etc/init.d/rc.local（兜底文件）—login（登录界面）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Linux启动流程&quot;&gt;&lt;a href=&quot;#Linux启动流程&quot; class=&quot;headerlink&quot; title=&quot;Linux启动流程&quot;&gt;&lt;/a&gt;Linux启动流程&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;启动顺序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;centos5：是按顺
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/Linux%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://yoursite.com/2017/11/30/Linux文件系统/</id>
+    <published>2017-11-30T05:47:32.586Z</published>
+    <updated>2017-11-05T09:34:12.783Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><ul><li>根文件系统</li></ul><pre><code>Linux的根文件系统叫做rootfs（/）；</code></pre><ul><li>根下目录介绍</li></ul><pre><code>1，/boot：用来存放系统启动相关的文档，如内核，initrd，以及grub等；2，/dev：设备文件；    块设备：能够随机访问的文件，数据块；    字符设备：线性访问，按字符为单位；    设备号：主设备号（major）和次设备号（minor）；3，/etc：配置文件；4，/home：用户的家目录，每一个用户在/home下都有一个与用户名匹配的目录；5，/root：管理员的家目录；6，/lib：库文件，只能被调用，不能自动执行；    静态库：.a结尾的文件    动态库：.dll和.so结尾的文件7，/proc：伪文件系统，内核映射文件；8，/sys：伪文件系统，跟硬件设备相关的属性映射文件；9，/opt：可选目录；10，/mnt：挂载点目录，额外的临时文件系统；11，/media：挂载点目录，移动设备；12，/tmp：临时文件；13，/var：可变化文件；14，/bin：可执行文件，用户命令；15，/sbin：管理员命令；16，/usr：包含所有的共享文件；</code></pre><ul><li>文件命名规则</li></ul><pre><code>1，文件名不能超过255个字符；2，文件名不能以/命名；3，文件名要严格区分大小写；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;文件系统&quot;&gt;&lt;a href=&quot;#文件系统&quot; class=&quot;headerlink&quot; title=&quot;文件系统&quot;&gt;&lt;/a&gt;文件系统&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;根文件系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Linux的根文件系统叫做rootfs（/）；
+&lt;/co
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/11/30/Linux基础命令/</id>
+    <published>2017-11-30T05:47:32.586Z</published>
+    <updated>2017-11-11T07:05:52.090Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Linux基础命令"><a href="#Linux基础命令" class="headerlink" title="Linux基础命令"></a>Linux基础命令</h2><ul><li>命令分类</li></ul><pre><code>1，内置命令：shell内部命令；2，外部命令：在文件系统的某个路径下有一个与命令名称相对应的可执行文件；</code></pre><h4 id="type命令"><a href="#type命令" class="headerlink" title="type命令"></a>type命令</h4><pre><code>查看命令的分类；</code></pre><h4 id="help命令"><a href="#help命令" class="headerlink" title="help命令"></a>help命令</h4><p>命令使用帮助；</p><ul><li>内置命令使用</li></ul><pre><code>help COMMAND</code></pre><ul><li>外部命令使用</li></ul><pre><code>COMMAND --help</code></pre><h4 id="man命令"><a href="#man命令" class="headerlink" title="man命令"></a>man命令</h4><pre><code>命令使用帮助；</code></pre><ul><li>man章节分类</li></ul><pre><code>1，用户命令（/bin;/usr/bin;/usr/local/bin）;2，系统调用；3，库用户；4，特殊文件（设备文件）；5，文件格式（配置文件的语法）6，游戏；7，杂项；8，管理命令（/sbin;/usr/sbin;/usr/local/sbin）;</code></pre><ul><li>命令行语法格式及特殊字符</li></ul><pre><code>命令 &lt;必选参数1|必选参数2&gt; [-option {必选参数1|必选参数2|必选参数3|}] [可选参数...] {（默认参数）|参数|参数}</code></pre><blockquote><p>1，&lt;&gt;：必选参数，实际使用时应将他替换为所要使用的参数；</p><p>2，{}：必选参数，内部使用，包含此处允许使用的参数；</p><p>3，[]：可选参数，在命令中根据需要加以取舍；</p><p>4，()：指明参数的默认值，一般用于{}中；</p><p>5，…：任意多个参数；</p><p>6，|：用于分隔多个互斥的参数，含义“或”，使用时只能选择一个；</p><h4 id="whatis"><a href="#whatis" class="headerlink" title="whatis"></a>whatis</h4><p>查看命令在man帮助中使用的章节；</p><h4 id="env命令"><a href="#env命令" class="headerlink" title="env命令"></a>env命令</h4><p>显示当前用户的环境变量；</p><h4 id="export命令"><a href="#export命令" class="headerlink" title="export命令"></a>export命令</h4><p>显示当前导出成用户变量的shell变量；<br>export LANG=en（设置当前使用的语言为英文）</p><h4 id="set命令"><a href="#set命令" class="headerlink" title="set命令"></a>set命令</h4><p>显示当前shell的变量和当前用户的变量；</p><h4 id="hash命令"><a href="#hash命令" class="headerlink" title="hash命令"></a>hash命令</h4><p>显示当前已缓存的命令路径，和使用次数；</p><h4 id="printf命令"><a href="#printf命令" class="headerlink" title="printf命令"></a>printf命令</h4><pre><code>格式化并输出结果到标准输出；</code></pre><ul><li>语法</li></ul></blockquote><pre><code>printf format [argument]</code></pre><ul><li>格式（format）</li></ul><pre><code>\n：换行；\t：水平制表符；</code></pre><h2 id="时间命令管理"><a href="#时间命令管理" class="headerlink" title="时间命令管理"></a>时间命令管理</h2><h4 id="date命令"><a href="#date命令" class="headerlink" title="date命令"></a>date命令</h4><pre><code>查看系统时间；</code></pre><ul><li>语法</li></ul><pre><code>date [option] ... [+format]</code></pre><ul><li>格式（+format）</li></ul><pre><code>%F：显示年-月-日；%D：显示日/月/年；%T：显示时.分.秒;%y|Y：显示年；%h：显示月；%d：显示日；%H：显示时；%M：显示分；%S：显示秒；%s：显示从从1970年到现在的秒数；</code></pre><h4 id="clock命令"><a href="#clock命令" class="headerlink" title="clock命令"></a>clock命令</h4><pre><code>查看硬件时间；</code></pre><ul><li>语法</li></ul><pre><code>clock [function] [option...]</code></pre><ul><li>选项</li></ul><pre><code>-w: --systohc以系统时间为准校正硬件时间；-s：--hctosys以硬件时间为准校正系统时间；</code></pre><h4 id="cal命令"><a href="#cal命令" class="headerlink" title="cal命令"></a>cal命令</h4><pre><code>查看日历；</code></pre><h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h4 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h4><pre><code>查看文件；</code></pre><ul><li>选项</li></ul><pre><code>-l：长格式显示；        -h：单位换算，以人类最易看懂的形式显示出来；-d：只显示目录文件；-i：显示文件的inode；-a：显示所有的文件；    .：当前目录；    ..：当前目录的父目录；-A：除了不显示.和..目录外，其他的都显示；-r：逆序显示；</code></pre><h4 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h4><pre><code>切换目录；</code></pre><ul><li>选项</li></ul><pre><code>~username：进入指定用户的家目录（只root用户可以使用）；-：在当前目录和前一次所在的目录来回切换；</code></pre><h4 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h4><pre><code>以绝对路径的形式显示当前所在的目录；</code></pre><h4 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h4><pre><code>创建目录；</code></pre><ul><li>语法</li></ul><pre><code>mkdir [option]... dir...</code></pre><ul><li>选项</li></ul><pre><code>-p：递归创建目录；-v：显示详细的执行过程；{}：特殊用法，可以同时创建多个目录，如{a,b}，在当前目录下同时创建a和b；</code></pre><h4 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h4><pre><code>删除空的目录；</code></pre><h4 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h4><pre><code>查看目录树；</code></pre><h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><h4 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h4><pre><code>修改文件的时间戳；</code></pre><ul><li>语法</li></ul><pre><code>touch [option]... file...</code></pre><ul><li>选项</li></ul><pre><code>-c：不创建文件，当文件存在时改变文件的时间戳；-a：改变文件的访问时间；-m：不改变文件内容，只改变文件的修改时间；-t：指定文件的访问时间和修改时间，时间格式为[[CC]YY]MMDDhhmm[.ss]（年月天时分.秒）；</code></pre><h4 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h4><pre><code>删除文件或命令；</code></pre><ul><li>语法</li></ul><pre><code>rm [option]... file...</code></pre><ul><li>选项</li></ul><pre><code>-r：递归删除文件或目录；-f：不用再次确认删除文件或目录；-v：显示详细的执行过程；</code></pre><h4 id="stat命令"><a href="#stat命令" class="headerlink" title="stat命令"></a>stat命令</h4><pre><code>查看文件的属性；</code></pre><ul><li>文件的时间戳的分类</li></ul><pre><code>1，atime：最近一次访问时间；2，mtime：最近一次修改时间；3，ctime：最近一次改变时间（元数据）；</code></pre><h4 id="file命令"><a href="#file命令" class="headerlink" title="file命令"></a>file命令</h4><pre><code>查看文件的类型；</code></pre><h4 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h4><pre><code>备份文件；</code></pre><ul><li>语法</li></ul><pre><code>cp [option]... SOURCE DEST</code></pre><ul><li>选项</li></ul><pre><code>-f：强制性的备份文件；-p：备份文件时不改变文件的属主和属组；-d：不改变文件的任何属性；-r|R：递归备份；-a：相当于-dR，归档备份，常用于数据备份；</code></pre><h4 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h4><pre><code>移动文件或目录；</code></pre><ul><li>语法</li></ul><pre><code>mv [option]... SOURCE DESTmv -t DEST SOURCE</code></pre><ul><li>选项</li></ul><pre><code>-f：强制覆盖；-t：先指定目标，再指定源文件；</code></pre><h4 id="install命令"><a href="#install命令" class="headerlink" title="install命令"></a>install命令</h4><pre><code>安装或升级软件或备份文件，但是install允许你控制文件的所有属性；</code></pre><ul><li>语法 </li></ul><pre><code>install [option]... SOURCE DESTinstall [option]... SOURCE... DIRECTORYinstall -d DIRECTORYinstall -t DIRECTORY SOURCE</code></pre><ul><li>选项</li></ul><pre><code>-t：先指定目标目录，再指定源文件；-d：生成目录；</code></pre><h3 id="查看文本"><a href="#查看文本" class="headerlink" title="查看文本"></a>查看文本</h3><h4 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h4><ul><li>命令格式</li></ul><pre><code>cat [option] [file]</code></pre><ul><li>参数选项</li></ul><pre><code>-n：对显示出来的每一行添加编号；-s：压缩连续的空行为一行；-b：只给文本中非空行编号；-E：对显示出来的每一行结尾加上$；-A：显示文本中所有的控制符；-v：显示文本中的特殊字符；</code></pre><h4 id="less命令"><a href="#less命令" class="headerlink" title="less命令"></a>less命令</h4><ul><li>功能</li></ul><pre><code>一页一页的查看文本</code></pre><ul><li>查看命令</li></ul><pre><code>/匹配项：在文本中搜索与匹配项相同的字符；n键：跳到下一个匹配到的字符；N键：跳到上一个匹配到的字符；q键：退出less；</code></pre><h4 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h4><pre><code>显示文本前行内容；</code></pre><ul><li>命令格式</li></ul><pre><code>head [option] [file]</code></pre><ul><li>参数选项</li></ul><pre><code>-#：直接指定要显示的前多少的行数；-n #：显示文本的前#行；-c #：显示文本的前#字节；-f：查看文件头部不退出，等待显示后续追加的内容；</code></pre><h4 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h4><pre><code>显示文本后行内容；</code></pre><ul><li>命令格式</li></ul><pre><code>tail [option] [file]</code></pre><ul><li>参数选项</li></ul><pre><code>-#：直接指定要显示的后多少行的行数；-n #：显示文本的后#行；-c #：显示文本的后#行；-f：查看文件尾部不退出，等待显示后续追加的内容；</code></pre><h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><h4 id="cut命令"><a href="#cut命令" class="headerlink" title="cut命令"></a>cut命令</h4><pre><code>按列处理文本；</code></pre><ul><li>命令格式</li></ul><pre><code>cut [option] [file]</code></pre><ul><li>参数选项</li></ul><pre><code>-d &quot;delimiter&quot;：指定分隔符；-f fields：指明要抽取的列；    #：第#列；    #，#，#：输出多个不连续的列；    #-#：输出连续多个列；</code></pre><h4 id="sort命令"><a href="#sort命令" class="headerlink" title="sort命令"></a>sort命令</h4><pre><code>用于文件的排序</code></pre><ul><li>命令格式</li></ul><pre><code>sort [option] [file]</code></pre><ul><li>选项</li></ul><pre><code>-n：按数字的大小，从小到大的排序；-r：反向的输出文本的内容；-t：指定分隔符；-k：指定匹配列；-f：排序时不区分大小写；-u：输出时删除重复的行；</code></pre><blockquote><p>注意： 1，sort默认是按照ASCII码表排序； 2，只有连续且完全相同的方为重复行；</p></blockquote><ul><li>命令格式</li></ul><pre><code>uniq [option] [file]</code></pre><ul><li>命令参数</li></ul><pre><code>-c：显示每一行重复的次数；-d：只显示重复过的行；-u：只显示不曾重复过的行；</code></pre><blockquote><p>注意：只有连续且完全相同的方为重复行；</p><h4 id="wc命令"><a href="#wc命令" class="headerlink" title="wc命令"></a>wc命令</h4><pre><code>收集文本行数、单词总数、字符总数和字节总数；</code></pre><ul><li>命令格式</li></ul></blockquote><pre><code>wc [option] [file]</code></pre><ul><li>选项</li></ul><pre><code>-l：只统计行总数；-w: 只统计单词总数；-m：相当于-c,只统计字符总数；-c：只统计字节总数；</code></pre><h4 id="tr命令"><a href="#tr命令" class="headerlink" title="tr命令"></a>tr命令</h4><pre><code>转换或删除字符；</code></pre><ul><li>命令格式</li></ul><pre><code>tr [option]... set1 [set2]</code></pre><ul><li>选项</li></ul><pre><code>-d：删除选定的字符；</code></pre><blockquote><p>注意：转换字符是要注意一一对应；</p><h4 id="diff命令"><a href="#diff命令" class="headerlink" title="diff命令"></a>diff命令</h4><p>用于比较两个文件的不同；</p><ul><li>命令格式</li></ul></blockquote><pre><code>diff [option]... [file] </code></pre><ul><li>选项</li></ul><pre><code>-s：显示两个文件的不一样行；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Linux基础命令&quot;&gt;&lt;a href=&quot;#Linux基础命令&quot; class=&quot;headerlink&quot; title=&quot;Linux基础命令&quot;&gt;&lt;/a&gt;Linux基础命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;命令分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;1，内置命令：sh
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/Linux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%84%E6%88%90/"/>
+    <id>http://yoursite.com/2017/11/30/Linux操作系统组成/</id>
+    <published>2017-11-30T05:47:32.570Z</published>
+    <updated>2017-09-28T08:03:03.807Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Linux操作系统组成"><a href="#Linux操作系统组成" class="headerlink" title="Linux操作系统组成"></a>Linux操作系统组成</h2><ul><li>说明</li></ul><p>Linux：功能丰富，提供菜单，允许用户选择要启动的操作系统和不同的内核版本。把用户选定的内核装载到内存中的特定空间中，解压、展开，并把系统的控制权移交给内核；</p><ul><li>Linux组成</li></ul><p>Linux=kernel+rootfs</p><h3 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h3><p>内核是一套操作系统的核心，主要包含的模块有：进程管理、内存管理、网络管理、驱动程序、文件系统、安全功能；</p><ul><li>内核设计流派</li></ul><ol><li>单内核</li></ol><p>单内核（monolithic kernel）是把所有的功能集成于同一个程序，如：Linux系统；</p><ol><li>微内核</li></ol><p>微内核（micro kernel）是每一种功能使用单独的子系统实现，如：Windows、Solaris；</p><blockquote><p>Solaris是Sun Microsystems研发的计算机操作系统，是UNIX操作系统的衍生版本之一；</p><ul><li>内核特点</li></ul></blockquote><ol><li>支持模块化</li><li>支持内核模块的动态装载和卸载</li></ol><ul><li>内核组成</li></ul><ol><li>核心文件</li></ol><p>/boot/vmlinuz-版本号-release 如：/boot/vmlinuz-2.6.32-642.el6.x86_64</p><ol><li>ramdisk</li></ol><p>2.1 centos5：</p><p>/boot/initrd- VERSION -release.img</p><p>2.2 centos6和7：</p><p>/boot/initramfs-版本号-release 如：/boot/initramfs-2.6.32-642.el6.x86_64.img</p><ol><li>模块文件</li></ol><p>/lib/modules/ VERSION -release 如：/lib/modules/2.6.32-642.el6.x86_64</p><h3 id="rootfs"><a href="#rootfs" class="headerlink" title="rootfs"></a>rootfs</h3><p>rootfs：根文件系统，是内核启动时所挂载的第一个文件系统，内核代码映像文件保存在根文件系统中，而系统引导会在根文件系统挂载之后从中把一些基本的初始化脚本和服务等加载到内存中去运行；</p><h4 id="应用程序"><a href="#应用程序" class="headerlink" title="应用程序"></a>应用程序</h4><p>二进制的执行文件</p><h4 id="glibc"><a href="#glibc" class="headerlink" title="glibc"></a>glibc</h4><p>glibc是系统的C函数库。glibc是Linux系统中最低层的API，几乎其它的任何运行库都会依赖于glibc。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Linux操作系统组成&quot;&gt;&lt;a href=&quot;#Linux操作系统组成&quot; class=&quot;headerlink&quot; title=&quot;Linux操作系统组成&quot;&gt;&lt;/a&gt;Linux操作系统组成&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Linux：功能丰富，
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/bash/"/>
+    <id>http://yoursite.com/2017/11/30/bash/</id>
+    <published>2017-11-30T05:47:32.554Z</published>
+    <updated>2017-11-14T04:01:27.345Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><h3 id="bash支持的功能"><a href="#bash支持的功能" class="headerlink" title="bash支持的功能"></a>bash支持的功能</h3><pre><code>1，命令历史、命令补全；2，管道和重定向；3，命令别名；4，命令行编辑；5，命令行替换；6，文件名通配；7，变量；8，编程；</code></pre><h2 id="命令历史和命令、路径补全"><a href="#命令历史和命令、路径补全" class="headerlink" title="命令历史和命令、路径补全"></a>命令历史和命令、路径补全</h2><h4 id="命令历史"><a href="#命令历史" class="headerlink" title="命令历史"></a>命令历史</h4><ul><li>history命令</li></ul><pre><code>查看历史命令；</code></pre><ul><li>语法</li></ul><pre><code>history [-c] [-d offset] or history -anrw filename or history -ps arg [arg...]</code></pre><ul><li>选项</li></ul><pre><code>-c：清除所有的历史命令；-d [n]：删除指定历史命令；-w：保存历史命令到某个文件；</code></pre><ul><li>使用历史命令技巧</li></ul><pre><code>!n：执行历史命令中第n条命令；!-n：执行历史命令中倒数第n条命令；!!：执行上一条命令；!string：执行历史命令中最近一个以指定字符串开头的命令；!$：引用上条命令的最后一个参数；</code></pre><h4 id="命令、路径补全"><a href="#命令、路径补全" class="headerlink" title="命令、路径补全"></a>命令、路径补全</h4><ul><li>命令补全</li></ul><pre><code>搜索PATH环境变量所指定的每个路径下以我们给出的字符串开头的可执行文件，如果多余一个，两次tab，可以给出一个列表。否则将直接补全；</code></pre><ul><li>路径补全</li></ul><pre><code>搜索我们给出的起始路径下的每个文件名，并试图补全；</code></pre><h2 id="重定向和管道"><a href="#重定向和管道" class="headerlink" title="重定向和管道"></a>重定向和管道</h2><ul><li>计算机五大组件</li></ul><pre><code>运算器、控制器：CPU；存储器：RAM；输入|输出设备；</code></pre><blockquote><p>控制器：控制指令；</p><p>运算器：计算过程；</p><p>存储器：</p></blockquote><pre><code>1，地址总线：内存寻址；2，数据总线：数据传输；3，控制总线：指令控制；</code></pre><blockquote><p>寄存器：CPU暂时存储器；</p><p>输入|输出设备：输入和输出数据；</p><p>程序：指令+数据；</p></blockquote><ul><li>系统设定</li></ul><pre><code>1，默认输出设备：标准输出，1；2，默认输入设备：标准输入，0；3，标准错误输出：2；</code></pre><h4 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h4><p>改变文件的输入或输出；</p><pre><code>&gt;：输出重定向；&gt;&gt;：追加输出重定向；2&gt;：错误输出重定向；2&gt;&gt;：错误追加输出重定向；&gt;|：强制输出重定向；&amp;&gt;：重定向所有输出；&lt;：输入重定向；</code></pre><ul><li>set命令</li></ul><p>设置输出重定向的使用和禁止；</p><ul><li>选项</li></ul><pre><code>-C：当文件中有数据时，禁止使用输出重定向将数据输出到这个文件中；+C：取消-C的使用；</code></pre><h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><pre><code>|：将前一个命令的输出作为后一个命令的输入；</code></pre><ul><li>tee</li></ul><pre><code>不仅可以保存数据到文件，也可以输出到屏幕上；</code></pre><ul><li>语法</li></ul><pre><code>tee [option]... [file]...</code></pre><ul><li>选项</li></ul><pre><code>tee什么也不加，相当于&gt;；-a：相当于&gt;&gt;；</code></pre><h2 id="命令别名"><a href="#命令别名" class="headerlink" title="命令别名"></a>命令别名</h2><ul><li>alias命令</li></ul><pre><code>设置别名；</code></pre><ul><li>语法</li></ul><pre><code>alias CMDALIAS=&apos;COMMAND [option] [arguments]&apos;</code></pre><blockquote><p>只alias是显示所有的别名；</p><ul><li>unalias命令</li></ul></blockquote><pre><code>取消别名</code></pre><ul><li>语法</li></ul><pre><code>unalias CMDALIAS</code></pre><h2 id="命令行编辑"><a href="#命令行编辑" class="headerlink" title="命令行编辑"></a>命令行编辑</h2><ul><li>光标跳转</li></ul><pre><code>Ctrl+a：跳转到行首Ctrl+e：跳转到行尾；Ctrl+u：删除光标至行首；Ctrl+k：删除光标至行尾；Ctrl+l：清屏；Ctrl+左键：跳转到单词词首；Ctrl+右键：跳转到单词词尾；Ctrl+w：删除光标所在的单词；</code></pre><h2 id="命令行替换"><a href="#命令行替换" class="headerlink" title="命令行替换"></a>命令行替换</h2><pre><code>$(COMMAND)或\`COMMAND\`</code></pre><blockquote><p>把命令中的某个子命令替换为其执行结果的替换；</p><ul><li>bash支持的引号</li></ul></blockquote><pre><code>``：反引号，命令替换；&quot;&quot;：双引号，弱引用，可以实现变量替换；&apos;&apos;：单引号，强引用，不完成变量替换；</code></pre><h2 id="文件名通配（globbing：通配符）"><a href="#文件名通配（globbing：通配符）" class="headerlink" title="文件名通配（globbing：通配符）"></a>文件名通配（globbing：通配符）</h2><pre><code>*：任意长度的任意字符；?：任意单个字符；[]：匹配指定范围内的任意单个字符；    [0-9],[a-z],[A-Z],[0-9a-zA-Z]    [[:space:]]：空白字符；    [[:punct:]]：标点符号；    [[:lower:]]：小写字母；    [[:alpha:]]：大写字符；    [[:digit:]]：数字；    [[:alnum:]]：数字和大小写字母；[^]：匹配非指定范围内的任意单个字符；</code></pre><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><pre><code>内存空间，命名空间；</code></pre><h4 id="变量分类"><a href="#变量分类" class="headerlink" title="变量分类"></a>变量分类</h4><pre><code>内部变量、环境变量、用户变量；</code></pre><h5 id="内部变量"><a href="#内部变量" class="headerlink" title="内部变量"></a>内部变量</h5><pre><code>内部变量是Linux所提供的一种特殊类型的变量，这类变量用来在程序中做判断，不能修改；</code></pre><h5 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h5><pre><code>Linux环境由许多变量和变量的值组成，这些变量和变量的值就是环境变量。包括两部分：    1，系统设置的；    2，用户用export命令设置的，但是用户注销时将丢失；</code></pre><h5 id="用户变量"><a href="#用户变量" class="headerlink" title="用户变量"></a>用户变量</h5><pre><code>用户自己根据需要所定义的变量；</code></pre><h5 id="变量命令"><a href="#变量命令" class="headerlink" title="变量命令"></a>变量命令</h5><ul><li>set命令</li></ul><pre><code>显示（设置）所有的变量；</code></pre><ul><li>export命令</li></ul><pre><code>显示（设置）环境变量；</code></pre><ul><li>env命令</li></ul><pre><code>显示（设置）用户变量；</code></pre><ul><li>unset命令</li></ul><pre><code>unset VARNAME：取消变量；（所有变量都可以用这个命令）</code></pre><h4 id="变量存储类型"><a href="#变量存储类型" class="headerlink" title="变量存储类型"></a>变量存储类型</h4><pre><code>事先确定变量的存储格式和长度；</code></pre><ul><li>类型分类</li></ul><pre><code>字符数值    整数    浮点型</code></pre><h4 id="bash变量分类"><a href="#bash变量分类" class="headerlink" title="bash变量分类"></a>bash变量分类</h4><ul><li>本地变量</li></ul><pre><code>VARNAME=VALUE只在当前shell有效；</code></pre><ul><li>局部变量</li></ul><pre><code>local VARNAME=VALUE只在当前一段代码有效；</code></pre><ul><li>环境变量</li></ul><pre><code>1，export VARNAME=VALUE2，    VARNAME=VALUE    export VARNAME只在当前shell及其子shell有效；</code></pre><ul><li>位置变量</li></ul><pre><code>$1：第一个位置变量；$2：第二个位置变量；...</code></pre><ul><li>特殊变量</li></ul><pre><code>$0：代表文件本身；$?：上一条命令的返回值；    0：正确执行；    1-255：错误执行，1、2、127为系统预留，有特殊意义，其他的用户可以自己定义；$#：显示参数的个数；$@：显示参数列表；$*：显示参数列表；</code></pre><blockquote><p>shift：轮询，当你使用多个参数时，而你只能一次调用一个参数，那么使用shift一次，它会自动跳到下一个参数；</p><h4 id="变量注意"><a href="#变量注意" class="headerlink" title="变量注意"></a>变量注意</h4><pre><code>1，脚本在执行时会启动一个子shell进程；2，命令行中启动的脚本会继承当前shell的环境变量；3，系统自动执行的脚本（非命令行启动）就需要自我定义需要的环境变量；</code></pre><h4 id="变量命令注意"><a href="#变量命令注意" class="headerlink" title="变量命令注意"></a>变量命令注意</h4><pre><code>1，不要和系统中已有的环境变量名重名；2，变量名最好见名知义；3，变量名只能由字母、数字和下划线来命名，但是不能以数字开头；</code></pre><h2 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h2><pre><code>编程语言：机器语言、汇编语言、高级语言；</code></pre><h4 id="高级语言分类"><a href="#高级语言分类" class="headerlink" title="高级语言分类"></a>高级语言分类</h4><ul><li>静态语言（编译型语言）</li></ul></blockquote><pre><code>强类型（变量）；事先转换成可执行格式；C、C++、JAVA、C#；</code></pre><blockquote><p>编译型语言：需要使用编译器来执行；</p><ul><li>动态语言（解释型语言）</li></ul></blockquote><pre><code>弱类型（变量）；边解释边执行；PHP、SHELL、Python、Perl；</code></pre><blockquote><p>解释型语言：需要使用解释器来边解释边执行；</p></blockquote><h4 id="编程风格"><a href="#编程风格" class="headerlink" title="编程风格"></a>编程风格</h4><ul><li>面向过程</li></ul><pre><code>面向过程是以步骤来划分问题，逐步来解决问题；</code></pre><ul><li>面向对象 </li></ul><pre><code>面向对象是以功能来划分问题，逐步来实现每个功能；</code></pre><h4 id="bash运算"><a href="#bash运算" class="headerlink" title="bash运算"></a>bash运算</h4><pre><code>1，算法运算2，逻辑运算</code></pre><h5 id="算法运算"><a href="#算法运算" class="headerlink" title="算法运算"></a>算法运算</h5><pre><code>加（+）、减（-）、乘（*）、除（/）、取余（%）、乘方（**）；</code></pre><ul><li>实现算术运算</li></ul><pre><code>A=3B=5C=$A+$B1，let C=$A+$B;2，C=$[$A+$B]3，C=$(($A+$B))</code></pre><blockquote><p>注意乘号（*）有些场景需要转义。转义符：\；</p><h5 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h5><pre><code>与、或、非、异或；0：假；1：真；</code></pre><ul><li>与（&amp;）</li></ul></blockquote><pre><code>1 &amp; 0 = 00 &amp; 1 = 00 &amp; 0 = 01 &amp; 1 = 1</code></pre><ul><li>或</li></ul><pre><code>0 或 1 = 11 或 0 = 10 或 0 = 01 或 1 = 1</code></pre><ul><li>非（!）</li></ul><pre><code>! 0 = 1! 1 = 0</code></pre><ul><li>短路与（&amp;&amp;）</li></ul><pre><code>第一个为0 ，结果必定为0；第一个为1 ，第二个必须要参与运算；cmd1 &amp;&amp; cmd2cmd1 成功，将执行cmd2；cmd1 失败，将不执行cmd2；</code></pre><ul><li>短路或（||）</li></ul><pre><code>第一个为1 ，结果必定为1；第一个为0 ，第二个必须要参与运算；cmd1 成功，将不执行cmd2；cmd1 失败，将执行cmd2；</code></pre><ul><li>异或（^）</li></ul><pre><code>异或的两个值, 相同为假，不同为真；0 ^ 1 = 11 ^ 0 = 10 ^ 0 = 01 ^ 1 = 1</code></pre><h4 id="条件判断，控制结构"><a href="#条件判断，控制结构" class="headerlink" title="条件判断，控制结构"></a>条件判断，控制结构</h4><h5 id="单if语句"><a href="#单if语句" class="headerlink" title="单if语句"></a>单if语句</h5><pre><code>if 判断条件； then    statement1    statement2    ...fi</code></pre><h5 id="双if语句"><a href="#双if语句" class="headerlink" title="双if语句"></a>双if语句</h5><pre><code>if 判断条件； then    statement1    ...else    statement2    ...fi</code></pre><h5 id="bash如何实现条件判断"><a href="#bash如何实现条件判断" class="headerlink" title="bash如何实现条件判断"></a>bash如何实现条件判断</h5><pre><code>基于以下三种条件测试类型：    1，整数测试    2，字符串测试    3，文件测试</code></pre><h5 id="整数测试"><a href="#整数测试" class="headerlink" title="整数测试"></a>整数测试</h5><pre><code>-eq：等于，测试两个整数是否相等，等于为真，否则为假；-ne：不等于，测试两个整数是否相等，不相等为真，否则为假；-gt：大于，测试第一个整数是否大于第二个整数，大于为真，否则为假；-lt：小于，测试第一个整数是否小于第二个整数，小于为真，否则为假；-ge：大于等于，测试第一个整数是否大于或等于第二个整数，大于或等于为真，否则为假；-le：小于等于，测试第一个整数是否小于或等于第二个整数，小于或等于为真，否则为假；</code></pre><h5 id="字符串测试"><a href="#字符串测试" class="headerlink" title="字符串测试"></a>字符串测试</h5><h5 id="文件测试"><a href="#文件测试" class="headerlink" title="文件测试"></a>文件测试</h5><pre><code>-e：测试文件是否存在；-f：测试文件是否为普通文件；-d：测试文件是否为目录文件；-r：测试当前用户对文件是否有读权限；-w：测试当前用户对文件是否有写权限；-x：测试当前用户对文件是否有执行权限；</code></pre><h5 id="条件测试的表达式"><a href="#条件测试的表达式" class="headerlink" title="条件测试的表达式"></a>条件测试的表达式</h5><pre><code>1，[ expression ]2，[[ expression ]]3，test expression注意：中括号中两边必须要有空格；</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;bash&quot;&gt;&lt;a href=&quot;#bash&quot; class=&quot;headerlink&quot; title=&quot;bash&quot;&gt;&lt;/a&gt;bash&lt;/h2&gt;&lt;h3 id=&quot;bash支持的功能&quot;&gt;&lt;a href=&quot;#bash支持的功能&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
